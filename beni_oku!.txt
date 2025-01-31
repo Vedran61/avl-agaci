@@ -1,0 +1,57 @@
+------------------------------------------------------------------------------
+Projede Kullanılan Metotlar:
+
+ekle(): Bu metotta, switch şartı sağlanması taktirde, alınan girdi listenin sonuna eklenerek 
+ağacın bir elemanı olur.
+sil(): Bu metotta, switch şartı sağlanması taktirde, alınan girdi ağaçtan silinir.
+ata(): Bu metotta, ağaçtaki sıralamadaki ata değer bulunur.
+
+------------------------------------------------------------------------------
+
+Projede Kullanılan Özel Metotlar:
+
+isEmpty(): Adından da anlaşılacağı gibi ağacın boş olup olmadığını kontrol eder.
+
+------------------------------------------------------------------------------
+
+EKLE-SİL-ATA KODLARI VE AÇIKLAMALARI
+
+------------------------------------------------------------------------------
+1-Ekle Metodu:
+
+Eğer düğüm “null” ise, düğüm türünden bir yeniDugum tanımlanır ve veri eklenir. Daha 
+sonra oluşan bu veri, yeniDugum değişkeni olarak atanır.
+Eğer düğüm verisi 0’dan büyükse sola, küçükse sola eklenir. Düğüm yüksekliği özel Math 
+fonksiyonuyla hesaplanır, denge faktörü kontrol edilir. Denge faktörü durumuna göre sağa 
+veya sola düğüm gönderme işlemi yapılır. En sonda düğüm döndürülür.
+
+------------------------------------------------------------------------------
+2-Sil Metodu:
+
+Eğer kök “null” ise kök döndürür.
+Eğer değer, kökün değerinden küçükse kökün solundaki değer silinir. Eğer değilse sağındaki 
+değer silinir. Şartlar sağlanmazsa başka bir if else döngüsüne girer. Sol kök null değilse, sol 
+kök tempe atılır, eğer sol kök null ise sağ kök tempe atılır. Eğer temp “null” ise, kök “null”
+olur ve 2. İf else döngüsündeki if sonucunda temp=”null” işlemi gerçekleşir. Hiçbir olumlu 
+döngüye girmez ise temp, sağ tarafın en küçüğüne atanır. Temp ile kök değerleri eşitlenir, 
+kökün sağından temp değeri silinir.
+
+------------------------------------------------------------------------------
+3-Ata Metodu:
+
+Kök ve düğüm “null” ise, “null” döndürür. Yani ata düğüm yok demektir. Kökün sağı “null”
+değilse ve kökün sağ değeri düğüm değerine eşitse veya kökün sağı null değilse ve kökün sol 
+değeri düğüm değerine eşitse kök döndürülür. Bu şartlar sağlanmazsa; bulunan düğüm kökün 
+sağının atasına eşitlenir. Eğer bulunan yoksa yani “null” ise, sola eşitlenir. Bulunan değeri 
+döndürülür.
+
+------------------------------------------------------------------------------
+
+MAİN KODLARI VE AÇIKLAMALARI
+
+------------------------------------------------------------------------------
+
+Mainde Avl Ağacı Class’ı avl olarak tanımlanır.
+Avl ağacına ekle() metodu ile eklemeler yapıldı!
+While döngüsüyle işlem kontrol yapılıp caseler üzerinden işlemler görülecektir. Neredeyse 
+her case içinde bir metod bulunmaktadır ve işlemler bu metodlar üzerinde dönerler.
